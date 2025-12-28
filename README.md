@@ -111,9 +111,9 @@ graph TD
     end
 
     subgraph Outputs
-    F --> G[Heatmaps (R1)]
-    F --> H[Growth Curves (R2)]
-    F --> I[Overlap Plots (R4)]
+    F --> G["Heatmaps (R1)"]
+    F --> H["Growth Curves (R2)"]
+    F --> I["Overlap Plots (R4)"]
     end
 ```
 
