@@ -4,9 +4,11 @@
 
 ## Abstract
 
-This project serves as a controlled experimental system to demonstrate and visualize the internalization of new concepts within the "Dragon Hatchling" (BDH) architecture. By leveraging a simplified BDH model, we isolate the micro-mechanisms of memory formation—specifically Hebbian synapse strengthening and sparse neuronal reallocation. Our results provide qualitative evidence that the model "locks in" concepts by evolving distinct, high-signal sub-networks, effectively addressing the plasticity-stability dilemma through structural reallocation rather than activation buffering. This report details the experimental protocol, visualizing the complete lifecycle of a memory from acquisition to persistence.
+This project serves as a controlled experimental system to demonstrate and visualize the internalization of new concepts within the "Dragon Hatchling" (BDH) architecture. By leveraging a simplified BDH model, we isolate the micro-mechanisms of memory formation—specifically Hebbian synapse strengthening and sparse neuronal reallocation. Our results provide qualitative evidence that the model "locks in" concepts by evolving distinct, high-signal sub-networks, offering a structural approach to the plasticity-stability dilemma through structural reallocation rather than activation buffering. This report details the experimental protocol, visualizing the complete lifecycle of a memory from acquisition to persistence.
 
 ## 1. Introduction
+
+The Dragon Hatchling (BDH) is an experimental neural architecture designed to support continuous learning through sparse activations and local Hebbian synaptic updates.
 
 ### 1.1 Context: The Plasticity-Stability Dilemma
 
