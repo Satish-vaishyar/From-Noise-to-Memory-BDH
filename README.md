@@ -82,6 +82,39 @@ The experiment follows a strict **3-Phase Protocol** to validate memory stabilit
 
 The BDH model relies on two core biological principles implemented in `models/bdh.py`:
 
+```mermaid
+graph TD
+
+    %% -------- Input Layer --------
+    subgraph Input_Stream ["Input Stream"]
+        A[Synthetic Data Generator]
+        A -- Concept Sequences<br/>(Zypher, Zyphrex) --> B
+    end
+
+    %% -------- Core Model --------
+    subgraph BDH_Core ["BDH Core (Learning Brain)"]
+        B[BDH Neural Loop]
+        B -- Activate Sparse Neurons --> C[Hebbian Learning Module]
+        C -- Update Synaptic Weights --> B
+    end
+
+    %% -------- Observability --------
+    subgraph Observability ["Observability & Introspection"]
+        C -. Log Internal State .-> D[State Logger]
+        B -. Log Activations .-> D
+        D -- Weights, Activations,<br/>Sparsity --> E[Visualization Engine]
+    end
+
+    %% -------- Outputs --------
+    subgraph Outputs ["Analysis Outputs"]
+        E --> F[R1: Activation Heatmaps]
+        E --> G[R2: Hebbian Growth Curves]
+        E --> H[R3: Sparsity Trends]
+        E --> I[R4: Concept Overlap Plots]
+        E --> J[R5: Memory Persistence Plots]
+    end
+```
+
 ### 1. Hebbian Learning ("Fire together, wire together")
 
 Unlike standard backpropagation which updates weights based on global error, the **HebbianLayer** updates weights based on the local correlation between input and output. If neuron A consistently activates neuron B, the connection between them is strengthened.
@@ -92,30 +125,6 @@ To prevent the "melting pot" effect where all neurons fire for everything, the m
 
 - Concepts are stored in distinct, non-overlapping subnetworks.
 - The model reserves capacity for future learning.
-
-```mermaid
-graph TD
-    subgraph Input_Stream
-    A[Synthetic Data Generator] -- "Concept stream (e.g., 'Zypher')" --> B
-    end
-
-    subgraph BDH_Core ["BDH Architecture (The 'Brain')"]
-    B[Neural Network Loop] -- "1. Activate Neurons" --> C{Hebbian Logic}
-    C -- "2. Strengthen Synapses" --> B
-    D[k-WTA Mechanism] -- "Suppress weak signals" --> B
-    end
-
-    subgraph Observability
-    C -.-> E[Internal State Logger]
-    E -- "Step-wise Weights & Activations" --> F[Visualization Interface]
-    end
-
-    subgraph Outputs
-    F --> G["Heatmaps (R1)"]
-    F --> H["Growth Curves (R2)"]
-    F --> I["Overlap Plots (R4)"]
-    end
-```
 
 ## Reproducibility
 
