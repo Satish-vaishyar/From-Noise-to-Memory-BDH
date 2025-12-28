@@ -7,7 +7,6 @@ env/
 venv/
 .env
 .ipynb_checkpoints
-results/
 .DS_Store
 .idea/
 .vscode/
